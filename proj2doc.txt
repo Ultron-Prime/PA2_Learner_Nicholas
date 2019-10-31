@@ -1,0 +1,35 @@
+Nick Learner
+9/11/19
+CS202, Section 1001
+
+The program starts with some basic documentation: the filename, a short description,
+the compiler used, and the modification history. The iostream and fstream header files
+are used, along with the std namespace. Only two global variables are used, which limit
+the number of cars the program processes data for and the maximum character array length.
+
+The RentalCar struct is initiated, with variables as given in the assignment pdf.
+
+The function prototypes include all the functions used in the program plus the myString...
+functions, which are neither implemented nor used in the program.
+
+The main() function only calls UserMenu() and returns 0.
+
+UserMenu() has several char, fstream, bool, and int variables, along with a RentalCar
+object, in order to process the data. A while() loop is used, which continues as long
+as the continuemenu variable is true. The continuemenu variable is only set to false
+within the 7th case of the switch statement, which is the "Exit program" option.
+
+DisplayUserMenu() is self-explanatory, and UserMenu() calls it then allows for a user
+input, which is used for the switch statement.
+Case 1 asks the user for the name  of an input file, which, if opened, is used to
+input data from. If it isn't opened, Error() is called, and the user must try again.
+Case 2 prints the car data from the file, unless the file hasn't been used to input
+data yet, then an error message is printed.
+Case 3 asks the user for an output file name, and, similar to case 1, outputs the car
+data to the file, or prints an error message.
+Case 4 sorts the cardata by ascending price.
+Cases 5 and 6 correspond to parts 5 and 6 of the User Menu as prescribed in the assignment
+pdf and complete the necessary actions, using several functions, as defined in the
+assignment pdf.
+Case 7 is the "Exit program" case, which sets the continuemenu variable to false, thereby
+terminating the while function and ending the program.
